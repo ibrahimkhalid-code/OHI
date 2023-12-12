@@ -44,7 +44,7 @@ header .container{
     width: 100%;
 }
 .header-logo{
-    width: 9%;
+    width: 13%;
 }
 
 .header-social ul li{
@@ -352,5 +352,8 @@ footer p{
     }
     .callUs-ul{
         width: 100%;
+    }
+    .header-logo{
+    width: 20%;
     }
 }
