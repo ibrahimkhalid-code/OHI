@@ -244,8 +244,11 @@ footer .header-list-center{
 /* Media Querie */
 
 @media only screen and (max-width: 768px){
-    body{
-        background-color: #333;
+    header{
+        height: 100px;
+    }
+    .header-logo{
+        width: 25%;
     }
     .header-list{
         display: none;
@@ -264,6 +267,9 @@ footer .header-list-center{
         flex-direction: column;
         align-items: center;
         
+    }
+    .staffCon{
+        width: 100%;
     }
     .schoolCous{
         margin-bottom: 10px;
