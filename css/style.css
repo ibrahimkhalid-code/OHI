@@ -262,7 +262,7 @@ footer .header-list-center{
     #course{
         margin-bottom: 15px;
     }
-    .staffCon ,.courses,
+    .staffCon,.courses,
     .schoolCous{
         flex-direction: column;
         align-items: center;
