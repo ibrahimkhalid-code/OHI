@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/brands.min.css">
-    <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link 
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-  rel="stylesheet"  type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/brands.min.js" integrity="sha512-giAmE8KpCT6HP3DEwIvW9LYVnDs79iIaKEYFTjH62EWoglWgdAJa1ahiLUfoc3NFaAeWM6E3VdQyH1Ob2dmwQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
     <title>المعهد العالي للعلوم الادارية بأوسيم</title>
 </head>
 <body>
@@ -27,92 +14,150 @@
                 <a href="index.html"><img src="img/logo.jpg" alt="logo"></a>
             </div>
             
+            <div class="Login">
+                <a href="index.php" class="login-btn">تسجيل الدخول</a>
+            </div>
+
             <div class="header-list">
                 <ul class="header-list-center">
                     
                     <li class="list"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i>الشعب</a>
                         <ul class="InerList">
-                            <li>نظم المعلومات الادارية</li>
-                            <li>محاسبة</li>
-                            <li>ادارة</li>
+                            <a href="mis.html"><li>نظم المعلومات الادارية</li></a>
+                            <a href="accounting.html"><li>محاسبة</li></a>
+                            <a href="management.html"><li>ادارة الاعمال</li></a>
                         </ul>
                     </li>
                     <li><a href="#staff">اعضاء هيئة التدريس</a></li>
-                    <li><a href="#politics">السياسات واللوائح</a></li>
-                    <li><a href="#callUs">اتصل بنا</a></li>
+                    <li><a href="#course">الكورسات</a></li>
+                    <li><a href="#schoolCou">المقررات الدراسية</a></li>
                 </ul>
             </div>
-            <div class="header-social">
-                <ul>
-                    <li style="border:1px solid #5D82D1;"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                    <li style="border:1px solid #0A66C2;"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
-                </ul>
-            </div>
-            <button onclick="btnclick();" id="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            
+            <!-- <button onclick="btnclick();" id="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button> -->
         </div>
     </header>
 
     <section class="home">
-            <img id="home-img">
+            <div class="container">
+                <h1>Welcome To OHI</h1>
+                <div class="Login">
+                    <a href="index.php" class="login-btn">تسجيل الدخول</a>
+                </div>
+            </div>
     </section>
 
     <section id="staff">
         <div class="headerSection">
-            اعضاء هيئة التدريس
+              <a class="staffMore" href="staff.html">المزيد</a>   اعضاء هيئة التدريس  
         </div>
         <div class="container">
-            <div class="staffImgs">
-                <!-- <button class="staffImgsBtn">></button> -->
-                <img src="img/21.jpg" alt="">
-                <img src="img/22.jpg" alt="">
-                <img src="img/23.jpg" alt="">
-                <img src="img/24.jpg" alt="">
-                <img src="img/25.jpg" alt="">
-                <!-- <img src="img/25.jpg" alt="">
-                <img src="img/26.jpg" alt=""> -->
+            <div class="staffCon">
+                <div class="staff">
+                    <img src="img/21.jpg" alt="">
+                </div>
+                <div class="staff">
+                    <img src="img/22.jpg" alt="">
+                </div>
+                <div class="staff">
+                    <img src="img/23.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="politics">
+    <section id="course">
         <div class="headerSection">
-            السياسات واللوائح
+            الكورسات
         </div>
 
         <div class="container">
-            <p class="politics-par">
-                تهدف هذه   السياسة إلى وضع الأطر العامة التي توجه أنشطة المعهد انطلاقاً من رسالته وقيمه   المؤسسية، وتحسن جودة عمليات اتخاذ القرار والتنفيذ والمتابعة، وتعزز أداء   الموظفين وخدمة الطلاب والعلاقة مع الشركاء
-            </p>
+            <div class="courses">
+                <div class="courContainer">
+                    <img src="img/courses/c++.jpg" alt="">
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">C++</a>
+                    </div>
+                </div>
+                <div class="courContainer">
+                    <img src="img/courses/php.jpg" alt="">
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">PHP</a>
+                    </div>
+                </div>
+                <div class="courContainer">
+                    <img src="img/courses/html.jpg" alt="">
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">HTML</a>
+                    </div>
+                </div>
+                <div class="courContainer">
+                    <img src="img/courses/css.jpg" alt="">
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">CSS</a>
+                    </div>
+                </div>
+                <div class="courContainer">
+                    <img src="img/courses/js.png" alt="">
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">JavaScript</a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </section>
 
-
-    <section id="callUs">
+    <section id="schoolCou">
         <div class="headerSection">
-            اتصل بنا
+            المقررات الدراسية
         </div>
+
         <div class="container">
-            <div class="callUs-content">
-                <div class="callUs-img">
-                    <img src="img/map.PNG" alt="">
+            <div class="schoolCous">
+                <div>
+                    <h2>تظبيقات الحاسب في اعداد التقارير</h2>
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">اذهب</a>
+                    </div>
                 </div>
-                <div class="callUs-ul">
-                    <ul>
-                        <li>الرئيسية</li>
-                        <li>نظم المعلومات الادارية</li>
-                        <li>أدارة</li>
-                        <li>محاسبة</li>
-                        <li>02 38699996</li>
-                        <li>العنوان: صيدا، أوسيم، محافظة الجيزة</li>
-                    </ul>
+                <div>
+                    <h2>ادارة المؤسسات المالية</h2>
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">اذهب</a>
+                    </div>
                 </div>
+                <div>
+                    <h2>دراسات محاسبية باللغة الانجليزية</h2>
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">اذهب</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>نظم المعلومات المحاسبية</h2>
+                    <div class="Login">
+                        <a href="index.php" class="login-btn">اذهب</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <ul class="footerList">
+                <ul class="header-list-center">
+                    <li><a href="#staff">اعضاء هيئة التدريس</a></li>
+                    <li><a href="#course">الكورسات</a></li>
+                    <li><a href="#callUs">المقررات الدراسية</a></li>
+                </ul>
+            </ul>
             <p>جميع الحقوق محفوظه للمعهد العالي للعلوم الادارية بأوسيم</p>
         </div>
     </footer>
