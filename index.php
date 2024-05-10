@@ -9,81 +9,48 @@
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-<header>
-        <div class="container">
-            <div class="header-logo">
-                <a href="index.html"><img src="img/logo.jpg" alt="logo"></a>
-            </div>
-            
-            <div class="Login">
-                <a href="index.php" class="login-btn">تسجيل الدخول</a>
-            </div>
 
-            <div class="header-list">
-                <ul class="header-list-center">
-                    
-                    <li class="list"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i>الشعب</a>
-                        <ul class="InerList">
-                            <a href="mis.html"><li>نظم المعلومات الادارية</li></a>
-                            <a href="accounting.html"><li>محاسبة</li></a>
-                            <a href="management.html"><li>ادارة الاعمال</li></a>
-                        </ul>
-                    </li>
-                    <li><a href="#staff">اعضاء هيئة التدريس</a></li>
-                    <li><a href="#politics">الكورسات</a></li>
-                    <li><a href="#callUs">المقررات الدراسية</a></li>
-                    <li><a href="#staff">اعضاء هيئة التدريس</a></li>
-                    <li><a href="#callUs">اتصل بنا</a></li>
-                </ul>
-            </div>
-            
-            <!-- <button onclick="btnclick();" id="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button> -->
-        </div>
-    </header>
-
-    <form method="POST">
+    <form method="POST" action="index.php">
         <div class="container">
             <label for="">Username</label>
-            <input type="text" name="user" id="">
+            <input type="text" id="username" name="username" required>
 
             <label for="">password</label>
-            <input type="password" name="pass" id="">
-            <button id="btnForm" type="submit" name="btnlogin">Login</button>
+            <input type="password" id="password" name="password" required>
+            <input id="btnForm" type="submit" value="تسجيل الدخول">
         </div>
     </form>
 
 
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $user = $_POST["user"];
-        $pass = $_POST["pass"];
+session_start();
 
-        $host = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $dbname = "ohi";
+require_once "php/db.php";
 
-        $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        $query = "SELECT * FROM login WHERE user = '$user' AND pass = '$pass'";
-        $result = $conn->query($query);
+    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
 
-        if ($result->num_rows == 1) {
-            // User is authenticated, perform actions or redirect to a secure page
-            header("Location: exam.html");
-            exit();
-        } else {
-            // Invalid credentials, display an error message or redirect to a login page
-            echo("Error");
-            exit();
-        }
+    if ($result->num_rows == 1) {
 
-        $conn->close();
+        $_SESSION['loggedIn'] = true;
+        $_SESSION['username'] = $username;
+
+        header('Location: php/dashboard.php');
+        exit();
+    } else {
+        echo 'بيانات تسجيل الدخول غير صحيحة!';
     }
+}
+
+$conn->close();
 ?>
+
+
+
 </body>
 </html>
